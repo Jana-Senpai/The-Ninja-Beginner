@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Beginner | Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url('./images/desktop/Halloween.png') center/cover no-repeat;
+            height: 100vh;
+            overflow: hidden;
+            padding-top: 5rem;
+        }
+
+        .container {
+            margin: 0 auto;
+            text-align: center;
+            /* height: 100vh; */
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin: 2rem 0;
+            color: #FFF;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .card {
+            width: 18rem;
+            background-color: #333333;
+            border-radius: 10px;
+            margin: 0 auto;
+            padding: 0.5rem;
+        }
+
+        .card-header {
+            line-height: 3rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .card-header h3 {
+            font-size: 2rem;
+            color: #FFF;
+        }
+
+        .card-body ul {
+            list-style: none;
+            text-decoration: none;
+        }
+
+        .card-body ul li {
+            background-color: #f33d3d;
+            margin: 1rem;
+            padding: 1rem 0;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .card-body ul li:hover, .btn:hover {
+            background-color: #c72c2c;
+            color: #000;
+        }
+        
+        .btn {
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">The <span style="color: #c72c2c;">N</span>inja <span style="color: #c72c2c;">B</span>eginner</h2>
+        <div class="row">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Main Menu</h3>
+                </div>
+                <div class="card-body">
+                    <ul id="menu">
+                        <li><a href="./Level/level.html" class="btn" onclick="">Start Game</a></li>
+                        <li><a href="./about.html" class="btn" onclick="">About</a></li>
+                        <li><a href="#" class="btn" onclick="">Exit</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var listItems = document.querySelectorAll('#menu li')
+
+            listItems.forEach(function(li){
+                li.addEventListener('click', function(){
+                    var anchor = li.querySelector('a');
+                    anchor.click();
+                })
+                
+                li.addEventListener('hover', function(){
+                    var anchor = li.querySelector('a');
+                    anchor.click();
+                })
+            })
+        })
+    </script>
+</body>
+</html>
